@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fluxby privacybeleid</title>
+<style>
+  :root { --bg:#ffffff; --fg:#1b1f2a; --muted:#5b6475; --accent:#0E86FF; --rule:#e3e6ec; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#05070D; --fg:#e8ebf2; --muted:#9aa3b5; --accent:#3d9dff; --rule:#1f2433; } }
+  html { background: var(--bg); }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 720px; margin: 0 auto; padding: 40px 16px 64px; }
+  h1 { font-size: 1.9rem; margin: 0 0 4px; }
+  h2 { font-size: 1.15rem; margin: 32px 0 8px; }
+  .date { color: var(--muted); margin: 0 0 24px; }
+  nav { margin: 0 0 8px; color: var(--muted); }
+  a { color: var(--accent); }
+  code { font-size: .92em; }
+  hr { border: 0; border-top: 1px solid var(--rule); margin: 56px 0; }
+  li { margin: 4px 0; }
+</style>
+</head>
+<body>
+<main>
+<nav><a href="#nl">Nederlands</a> · <a href="#en">English</a></nav>
+
+<section id="nl" lang="nl">
+<h1>Privacybeleid Fluxby</h1>
+<p class="date">Laatst bijgewerkt: 16 oktober 2026</p>
+
+<p>Fluxby is een client-app voor Android TV, telefoon en tablet waarmee je verbinding maakt met je <strong>eigen</strong> Emby-mediaserver. De app biedt zelf geen mediacontent aan en heeft geen eigen accounts, servers of backend.</p>
+
+<h2>Welke gegevens verzamelen wij?</h2>
+<p><strong>Geen.</strong> De ontwikkelaar van Fluxby verzamelt, ontvangt en bewaart geen enkel gegeven over jou of je gebruik van de app. Er zit geen analytics in, geen crashrapportage en geen advertentie-SDK.</p>
+
+<h2>Welke gegevens staan er op je toestel?</h2>
+<p>Om te werken bewaart de app het volgende lokaal, op het toestel zelf:</p>
+<ul>
+  <li>Het adres van je Emby-server, je gebruikersnaam en het toegangstoken dat je server na het inloggen teruggeeft. Deze staan in de versleutelde opslag van Android (EncryptedSharedPreferences).</li>
+  <li>Je app-voorkeuren: taal, afspeel- en weergave-instellingen, de volgorde van je dashboardrijen en je zijbalk.</li>
+  <li>Optioneel: een MDBList API-sleutel en het adres en de sessiecookie van een Seerr-instantie, als je die integraties zelf inschakelt.</li>
+  <li>Optioneel: media die je zelf hebt gedownload voor offline kijken.</li>
+</ul>
+<p>Deze gegevens verlaten je toestel niet, behalve naar de servers die je zelf hebt ingevoerd (zie hieronder). Ze worden verwijderd wanneer je uitlogt of de app deïnstalleert.</p>
+
+<h2>Met welke servers praat de app?</h2>
+<p>Uitsluitend met servers die jij zelf configureert of kiest:</p>
+<ol>
+  <li><strong>Je eigen Emby-server.</strong> Hiernaartoe gaan je inloggegevens, je afspeelvoortgang en de verzoeken om media af te spelen. Wat die server met die gegevens doet, valt onder jouw eigen beheer van die server.</li>
+  <li><strong>Emby Connect</strong> (<code>connect.emby.media</code>) — alleen als je kiest voor "Inloggen met Emby Connect". Hiernaartoe gaan je Emby Connect-gebruikersnaam en -wachtwoord, om de servers op te halen die aan dat account gekoppeld zijn. Daarop is het privacybeleid van Emby van toepassing.</li>
+  <li><strong>MDBList</strong> (<code>api.mdblist.com</code>) — alleen als je een API-sleutel invult. De app stuurt hier een TMDB-id van een film of serie heen om beoordelingen op te halen. Er gaan geen persoonsgegevens mee.</li>
+  <li><strong>Een Seerr-instantie</strong> — alleen als je er een verbindt. Hiernaartoe gaan de gebruikersnaam en het wachtwoord van je mediaserver om in te loggen, en je aanvragen voor titels. Het adres bepaal je zelf.</li>
+  <li><strong><code>image.tmdb.org</code></strong> — voor de posterafbeeldingen van Seerr-resultaten.</li>
+  <li><strong>YouTube</strong> (<code>youtube.com</code> / <code>youtube-nocookie.com</code>) — alleen wanneer je een trailer afspeelt die alleen als YouTube-video beschikbaar is. Dat gebeurt in een ingebedde YouTube-speler, waarop het privacybeleid van Google van toepassing is.</li>
+</ol>
+<p>De app maakt geen verbinding met welke andere server dan ook.</p>
+
+<h2>Android TV "Volgende afspelen"</h2>
+<p>Als je toestel dat ondersteunt, zet Fluxby de titels uit je "verdergaan met kijken" in de rij "Volgende afspelen" van het Android TV-startscherm. Dat gebeurt via een systeemvoorziening van Android; die gegevens blijven op het toestel en gaan naar het startscherm van je eigen tv, niet naar ons.</p>
+
+<h2>Rechten die de app vraagt</h2>
+<ul>
+  <li><strong>Internet</strong> — om met je eigen server te praten.</li>
+  <li><strong>Lezen/schrijven van tv-programmagegevens</strong> — uitsluitend om de hierboven genoemde "Volgende afspelen"-tegels te plaatsen.</li>
+  <li><strong>Meldingen, voorgrondservice en wakker houden</strong> — uitsluitend om muziek door te laten spelen terwijl de app op de achtergrond staat, met de bediening in een melding. Via diezelfde mediasessie kan Android Auto het afspelen bedienen; daarbij gaan geen gegevens naar ons.</li>
+</ul>
+
+<h2>Kinderen</h2>
+<p>Fluxby is niet gericht op kinderen en verzamelt bewust geen gegevens, dus ook geen gegevens van kinderen.</p>
+
+<h2>Wijzigingen</h2>
+<p>Wijzigingen in dit beleid verschijnen op deze pagina, met een nieuwe datum bovenaan.</p>
+
+<h2>Contact</h2>
+<p>Vragen over dit privacybeleid kun je stellen via het e-mailadres dat bij de app in de Google Play Store staat vermeld.</p>
+</section>
+
+<hr>
+
+<section id="en" lang="en">
+<h1>Fluxby privacy policy</h1>
+<p class="date">Last updated: 16 October 2026</p>
+
+<p>Fluxby is a client app for Android TV, phones and tablets that connects to your <strong>own</strong> Emby media server. The app does not provide any media content itself and has no accounts, servers or backend of its own.</p>
+
+<h2>What data do we collect?</h2>
+<p><strong>None.</strong> The developer of Fluxby does not collect, receive or store any data about you or your use of the app. There is no analytics, no crash reporting and no advertising SDK.</p>
+
+<h2>What data is stored on your device?</h2>
+<p>To work, the app stores the following locally, on the device itself:</p>
+<ul>
+  <li>Your Emby server address, your username and the access token your server returns after you sign in. These are kept in Android's encrypted storage (EncryptedSharedPreferences).</li>
+  <li>Your app preferences: language, playback and display settings, the order of your dashboard rows and your sidebar.</li>
+  <li>Optional: an MDBList API key, and the address and session cookie of a Seerr instance, if you enable those integrations yourself.</li>
+  <li>Optional: media you have downloaded yourself for offline viewing.</li>
+</ul>
+<p>This data never leaves your device, except to the servers you entered yourself (see below). It is deleted when you sign out or uninstall the app.</p>
+
+<h2>Which servers does the app talk to?</h2>
+<p>Only servers you configure or choose yourself:</p>
+<ol>
+  <li><strong>Your own Emby server.</strong> Your sign-in details, your playback progress and requests to play media go here. What that server does with this data is under your own management of that server.</li>
+  <li><strong>Emby Connect</strong> (<code>connect.emby.media</code>) — only if you choose "Sign in with Emby Connect". Your Emby Connect username and password go here, to fetch the servers linked to that account. Emby's privacy policy applies.</li>
+  <li><strong>MDBList</strong> (<code>api.mdblist.com</code>) — only if you enter an API key. The app sends the TMDB id of a film or series to fetch ratings. No personal data is included.</li>
+  <li><strong>A Seerr instance</strong> — only if you connect one. Your media server username and password go here to sign in, along with your title requests. You choose the address.</li>
+  <li><strong><code>image.tmdb.org</code></strong> — for the poster images of Seerr results.</li>
+  <li><strong>YouTube</strong> (<code>youtube.com</code> / <code>youtube-nocookie.com</code>) — only when you play a trailer that is only available as a YouTube video. This happens in an embedded YouTube player, to which Google's privacy policy applies.</li>
+</ol>
+<p>The app does not connect to any other server.</p>
+
+<h2>Android TV "Play Next"</h2>
+<p>Where your device supports it, Fluxby places the titles from your "continue watching" in the "Play Next" row of the Android TV home screen. This happens through an Android system facility; the data stays on the device and goes to your own TV's home screen, not to us.</p>
+
+<h2>Permissions the app requests</h2>
+<ul>
+  <li><strong>Internet</strong> — to talk to your own server.</li>
+  <li><strong>Read/write TV programme data</strong> — solely to place the "Play Next" tiles described above.</li>
+  <li><strong>Notifications, foreground service and wake lock</strong> — solely to keep music playing while the app is in the background, with the controls in a notification. Android Auto can control playback through that same media session; no data is sent to us.</li>
+</ul>
+
+<h2>Children</h2>
+<p>Fluxby is not aimed at children and deliberately collects no data, so no data from children either.</p>
+
+<h2>Changes</h2>
+<p>Changes to this policy appear on this page, with a new date at the top.</p>
+
+<h2>Contact</h2>
+<p>Questions about this privacy policy can be sent to the email address listed with the app in the Google Play Store.</p>
+</section>
+</main>
+</body>
+</html>
